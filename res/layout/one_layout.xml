@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <Button android:id="@+id/A" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开bing网页" 
+        />
+    <Button android:id="@+id/E" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="显式进入活动B" 
+        />
+     <Button android:id="@+id/F" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="隐式进入活动B" 
+        />
+     <Button android:id="@+id/G" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打电话" 
+        />
+     <Button android:id="@+id/H" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="传达数据给活动B" 
+        />
+          
+     
+     
+     
+     <Button android:id="@+id/B" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="退出" 
+        />
+</LinearLayout>
