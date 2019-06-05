@@ -2,11 +2,10 @@ package com.demo;
 
 import com.demo.andrioda.R;
 
-import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -17,7 +16,7 @@ import android.widget.Toast;
  * @author Cherry
  * @date  2019年6月4日
  */
-public class ActTwo extends Activity {
+public class ActTwo extends BaseActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -69,8 +68,13 @@ public class ActTwo extends Activity {
 		setResult(RESULT_OK, ints);
 	}
 	
-	@Override
-	public boolean onCreatePanelMenu(int featureId, Menu menu) {
-		return true;
+	/*
+	 * 活动B调用此方法，传入上一层活动及其参数，启动自己。
+	 */
+	public static void actionStart(Context context,String paramA,Integer paramB){
+		Intent ints = new Intent(context,ActTwo.class);
+		ints.putExtra("a", paramA);
+		ints.putExtra("b", paramB);
+		context.startActivity(ints);
 	}
 }

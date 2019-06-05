@@ -21,7 +21,7 @@ import android.widget.Toast;
  * @author Cherry
  * @date  2019年6月4日
  */
-public class ActOne extends Activity {
+public class ActOne extends BaseActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -71,6 +71,12 @@ public class ActOne extends Activity {
 				Intent ints = new Intent(ActOne.this,ActTwo.class);
 				ints.putExtra("key", "活动One传递过来的参数！");
 				//startActivity(ints);
+				
+				/*
+				 * ActTow直接调用actionStart，进入活动，同时传入参数。
+				 */
+				//ActTwo.actionStart(ActOne.this, "参数1", 110);
+				
 				/*
 				 * 获取活动B的返回值的启动方式,通过onActivityResult方法获取返回值。
 				 */
